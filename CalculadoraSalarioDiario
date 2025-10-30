@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+/**
+ * CalculadoraSalarioDiarioDebora.java
+ * Programa simples em Java para calcular o valor total a receber
+ * com base no número de dias trabalhados e no valor da diária.
+ *
+ * Feito por Débora Martins para o Hacktoberfest 2025 🎃
+ */
+public class CalculadoraSalarioDiarioDebora {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Calculadora de Salário Diário ===");
+        System.out.print("Digite o valor da diária (R$): ");
+        double diaria = sc.nextDouble();
+
+        System.out.print("Digite o número de dias trabalhados: ");
+        int dias = sc.nextInt();
+
+        // Calcula o total a receber
+        double total = diaria * dias;
+
+        System.out.printf("\n💼 Você trabalhou %d dias a R$%.2f por dia.%n", dias, diaria);
+        System.out.printf("💰 Total a receber: R$%.2f%n", total);
+
+        // Dica adicional: se quiser, pode calcular desconto de INSS ou imposto aqui
+        System.out.println("\nObrigado por usar a Calculadora de Salário Diário!");
+        sc.close();
+    }
+}
